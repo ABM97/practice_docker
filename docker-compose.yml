@@ -13,6 +13,6 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=abdallah
       - POSTGRES_PASSWORD=z
       - POSTGRES_DB=practicedocker

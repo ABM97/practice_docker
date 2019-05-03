@@ -12,7 +12,7 @@ const connectSequelize = async () => {
     console.log("Successfully connected to the database");
     server.listen(PORT, () => console.log(`Server running on ${PORT}`));
   } catch (e) {
-    msg = "error";
+    msg = e.message;
     server.listen(PORT, () => console.log(`Server running on ${PORT}`));
     console.log("error");
   }
