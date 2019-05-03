@@ -13,6 +13,7 @@ const connectSequelize = async () => {
     server.listen(PORT, () => console.log(`Server running on ${PORT}`));
   } catch (e) {
     msg = "error";
+    server.listen(PORT, () => console.log(`Server running on ${PORT}`));
     console.log("error");
   }
 };
