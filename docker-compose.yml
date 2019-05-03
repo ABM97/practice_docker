@@ -8,11 +8,11 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://abdalah:z@db:5432/practicedocker
+      - DATABASE_URL=postgres://postgres:z@db:5432/practicedocker
       - PORT=3000
   db:
     image: postgres
     environment:
-      - POSTGRES_USER=abdallah
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=z
       - POSTGRES_DB=practicedocker
