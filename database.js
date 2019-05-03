@@ -3,14 +3,14 @@ const Sequelize = require("sequelize");
 let db;
 // Docker version
 if (process.env.DATABASE_URL) {
-  db = new Sequelize("dockerpractice", "postgres", "z", {
+  db = new Sequelize("practicedocker", "postgres", "z", {
     dialect: "postgres",
     host: "db",
     logging: false
   });
 } else {
   // localhost version
-  db = new Sequelize("dockerpractice", "abdallah", "z", {
+  db = new Sequelize("practicedocker", "abdallah", "z", {
     dialect: "postgres",
     host: "localhost",
     logging: false
