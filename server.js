@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 const PORT = 3000;
-const db = require("./server");
+const db = require("./database");
 
 var msg;
 
@@ -10,6 +10,7 @@ const connectSequelize = async () => {
     await db.authenticate();
     msg = "Successfully connected to the database";
     console.log("Successfully connected to the database");
+    server.listen(PORT, () => console.log(`Server running on ${PORT}`));
   } catch (e) {
     msg = "error";
     console.log("error");
@@ -18,5 +19,4 @@ const connectSequelize = async () => {
 
 connectSequelize();
 
-server.listen(PORT, () => console.log(`Server running on ${PORT}`));
 server.get("/", (req, res) => res.status(200).send(msg));
