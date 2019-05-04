@@ -10,7 +10,7 @@ if (process.env.DATABASE_URL) {
   });
 } else {
   // localhost version
-  db = new Sequelize("practicedocker", "abdallah", "z", {
+  db = new Sequelize("practicedocker", "postgres", "z", {
     dialect: "postgres",
     host: "localhost",
     logging: false
